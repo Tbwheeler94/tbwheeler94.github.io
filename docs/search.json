@@ -1,0 +1,42 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About me",
+      "description": "Accelerating marine and energy solutions to mitigate climate change.",
+      "author": [],
+      "contents": "\nI am a creator; I am most engaged and alive when I am creating new ideas, code, businesses, experiences, or understanding. My childhood near the ocean in San Diego, CA helped me cultivate a relationship with the natural world from a young age and a course in environmental science my senior year of high school catalyzed my interested in rethinking humanity’s relationship to our planet. As an undergraduate at Santa Clara University studying environmental science I began thinking more critically about what that new world could look like as a Global Social Benefit Fellow through the Miller Center for Social Entrepreneurship. My experience helped me better understand business strategy in a developing world context and the potential for business to reduce poverty with the right incentives and model. I was also exposed to impact investing and the critical role socially responsible investing can play in catalyzing equitable and environmentally sustainable businesses.\nIn 2016, I spent 4.5 months hiking the 2650 mile Pacific Crest Trail from Mexico to Canada and had the privilege of discovering many of the western United State’s most treasured natural spaces. Inspired by my work as an undergraduate I continued developing my interest in social enterprise as Business Development for CocoAsenso, a social enterprise improving farmer livelihoods in the rural Philippines through decentralized coconut processing. My experience in the Philippines revealed the tremendous opportunity to improve livelihoods of rural communities by investing in high-value equipment to improve the value of traditionally low value commodity crops. Following my interest in growing impact-driven business models working with rural communities, I returned to to San Diego, CA to work with All Across Africa as a Sales Associate. As a Sales Associate, I connected East African women artisans with U.S. retailers including Williams-Sonoma, Wayfair, and The Little Market, creating a high-value market for their handwoven goods and improving their incomes 3-4x from typical agricultural wages.\nToday, I’m interested in using my business experience and education in data science tools from UCSD Extension’s Data Science and Visualization Bootcamp to guide future investments in aquaculture and renewable energy contexts. At the Bren School for Environmental Science and Management, I’m furthering my understanding of human:ecological systems and developing my data science toolkit in R. I’m currently a graduate researcher studying energy use and carbon emissions from data centers with professor Eric Masanet at the Industrial Sustainability Analysis Lab here at UCSB.\n\n\n\n",
+      "last_modified": "2021-03-13T14:33:43-08:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Recent Projects",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-13T14:44:40-08:00"
+    },
+    {
+      "path": "CV.html",
+      "title": "CV",
+      "author": [],
+      "contents": "\n\n\n\n\n\n",
+      "last_modified": "2021-03-13T14:33:49-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Tom Wheeler",
+      "author": [],
+      "contents": "\n\n          \n          \n          TW\n          \n          \n          Home\n          About\n          CV\n          Recent Projects\n          ☰\n          \n          \n      \n        \n          \n            Tom Wheeler\n          \n          \n            \n              Currently a Master’s student at the Bren School for Environmental Science & Management at University of California, Santa Barbara. I’m interested in using insights unlocked from data to bridge environmental and business goals in marine and energy contexts.\n            \n            \n              Currently a Master’s student at the Bren School for Environmental Science & Management at University of California, Santa Barbara. I’m interested in using insights unlocked from data to bridge environmental and business goals in marine and energy contexts.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-03-13T14:49:21-08:00"
+    },
+    {
+      "path": "portfolio.html",
+      "title": "Portfolio",
+      "description": "A gallery of my previous data science projects",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-13T14:49:52-08:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

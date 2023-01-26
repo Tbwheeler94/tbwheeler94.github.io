@@ -1,0 +1,84 @@
+---
+title: "Spatial Analysis of Oil Spills In California"
+description: |
+  Mapping spatial data using R.
+author:
+  - name: Thomas Wheeler
+date: 02-25-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    theme: space
+    code_folding: hide
+---
+
+
+### Overview
+
+This project conducts an exploratory analysis of oil spill incidents in California. The first tab is an interactive graph of oil spill locations throughout California and the second visualizes cumulative counties of oil spills by county to better understand which counties are most impacted by oil spills.
+
+### Data
+
+The Office of Spill Prevention and Response (OSPR) Incident Tracking Database is a statewide oil spill tracking information system. The data are collected by OSPR Field Response Team members for Marine oil spills and by OSPR Inland Pollution Coordinators and Wardens for Inland incidents.
+
+Data source: **Office of Spill Prevention and Response (OSPR) Incident Tracking Database** [CA.gov](https://gis.data.ca.gov/datasets/7464e3d6f4924b50ad06e5a553d71086_0/data)
+
+### Packages Used in Analysis
+
+```{r setup, echo=TRUE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(sf)
+library(tmap)
+library(gstat)
+library(stars)
+```
+
+## {.tabset}
+
+### Oil Spill Locations in California
+
+This interactive map provides an overview of all oil spill locations recorded by the Office of Spill Prevention and Response.
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+#read in California counties layer
+ca_counties <- read_sf(here("_posts", "2021-02-08-welcome", "welcome_files", "data"), layer = "CA_Counties_TIGER2016") %>%
+  clean_names()
+
+#read in California counties layer
+oil_spills <- read_sf(here("_posts", "2021-02-08-welcome", "welcome_files", "data"), layer = "Oil_Spill_Incident_Tracking_%5Bds394%5D") %>%
+  clean_names()
+```
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+#make tmap interactive
+tmap_mode("view")
+
+#plot interactive map
+tm_shape(oil_spills) +
+  tm_dots()
+```
+
+### Count of Oil Spills by County
+
+This static map aggregates all oil spill incidents recorded by county.
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+#join oil_spills with california counties layer
+ca_oil_spills <- ca_counties %>% 
+  st_join(oil_spills)
+
+#count of values in ca counties
+ca_counts <- ca_oil_spills %>% 
+  count(name)
+
+#create finalized static cloropleth of count of oil spills by county
+ggplot(data = ca_counts) +
+  geom_sf(aes(fill = n), color = "white", size = 0.1) +
+  scale_fill_gradientn(colors = c("lightgray","orange","red")) +
+  theme_minimal() +
+  labs(fill = "Number of oil spills")
+```

@@ -1,0 +1,9 @@
+---
+title: "Portfolio"
+description: |
+  A gallery of my previous data science projects
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
