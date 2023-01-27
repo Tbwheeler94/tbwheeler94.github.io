@@ -4,6 +4,14 @@ description: |
   TW
 output_dir: "docs"
 navbar:
+  search: false
+  left:
+    - icon: fab fa-github
+      href: https://github.com/Tbwheeler94
+    - icon: fab fa-linkedin
+      href: https://linkedin.com/in/thomaswheeler94
+    - icon: far fa-envelope
+      href: mailto:tbwheeler94@gmail.com
   right:
     - text: "Home"
       href: index.html
