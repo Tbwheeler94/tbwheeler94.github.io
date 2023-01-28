@@ -1,0 +1,17 @@
+```{r}
+library(wordcloud2)
+library(RColorBrewer)
+library(tibble)
+library(htmlwidgets)
+library(webshot)
+webshot::install_phantomjs()
+
+words <- c("energy transition", "R", "Python", "grid resilience","distributed energy resources","energy demand modeling","data centers","web development","economic modeling","data science","sustainability","Django","R Shiny","JavaScript","geospatial analysis","entrepreneurship")
+
+df <- tibble(word=words, freq=1)
+
+wordcloud <- wordcloud2(data=df, size=.5, color = "random-light", shape="circle", gridSize = 25, ellipticity = 0.25)
+saveWidget(wordcloud, "tmp.html", selfcontained = F)
+webshot::webshot("tmp.html","img/wordcloud.png",vwidth = 2500, vheight = 1231.5)
+```
+

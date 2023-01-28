@@ -1,15 +1,7 @@
 ---
 title: "About me"
 description: |
-  Accelerating marine and energy solutions to mitigate climate change.
+  Developer and analyst excited about the energy transition.
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-I am a creator; I am most engaged and alive when I am creating new ideas, code, businesses, experiences, or understanding. My childhood near the ocean in San Diego, CA helped me cultivate a relationship with the natural world from a young age and a course in environmental science my senior year of high school catalyzed my interested in rethinking humanity's relationship to our planet. As an undergraduate at Santa Clara University studying environmental science I began thinking more critically about what that new world could look like as a [Global Social Benefit Fellow](https://www.millersocent.org/portfolio/jibu/) through the Miller Center for Social Entrepreneurship. My experience helped me better understand business strategy in a developing world context and the potential for business to reduce poverty with the right incentives and model. I was also exposed to impact investing and the critical role socially responsible investing can play in catalyzing equitable and environmentally sustainable businesses.
-
-In 2016, I spent 4.5 months hiking the 2650 mile Pacific Crest Trail from Mexico to Canada and had the privilege of discovering many of the western United State's most treasured natural spaces. Inspired by my work as an undergraduate I continued developing my interest in social enterprise as Business Development for [CocoAsenso](https://www.cocoasenso.com), a social enterprise improving farmer livelihoods in the rural Philippines through decentralized coconut processing. My experience in the Philippines revealed the tremendous opportunity to improve livelihoods of rural communities by investing in high-value equipment to improve the value of traditionally low value commodity crops. Following my interest in growing impact-driven business models working with rural communities, I  returned to to San Diego, CA to work with All Across Africa as a Sales Associate. As a Sales Associate, I connected East African women artisans with U.S. retailers including Williams-Sonoma, Wayfair, and The Little Market, creating a high-value market for their handwoven goods and improving their incomes 3-4x from typical agricultural wages.
-
-Today, I'm interested in using my business experience and education in data science tools from UCSD Extension's Data Science and Visualization Bootcamp to guide future investments in aquaculture and renewable energy contexts. At the Bren School for Environmental Science and Management, I'm furthering my understanding of human:ecological systems and developing my data science toolkit in R. I'm currently a graduate researcher studying energy use and carbon emissions from data centers with professor Eric Masanet at the Industrial Sustainability Analysis Lab here at UCSB.
+<img style="width:130%; position: relative; left: 50%; transform: translateX(-50%);" src="img/wordcloud.png"></img>

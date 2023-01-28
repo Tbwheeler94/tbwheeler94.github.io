@@ -1,6 +1,6 @@
 ---
 title: "Tom Wheeler"
-image: "Wheeler_Tom_MESM_Bren_002.png"
+image: "img/Wheeler_Tom_MESM_Bren_002.png"
 links:
   - label: Energy Transition
     class: test
@@ -16,6 +16,6 @@ output:
 <h6>University of California, Santa Barbara</h6>
 </div>
 
-<p class="mt-3">Software developer & energy data analyst. Currently developing a dashboard to calculate the value of a utility-scale front-of-meter solar energy generation project in CA. Check out my recent projects to see more of my work!</p>
+<p class="mt-3">Software developer & energy data analyst living in San Diego. Currently developing a dashboard to calculate the value of a utility-scale front-of-meter solar energy generation project in CA. I love surfing, daily meditation, and nerding out on energy.</p>
 
 <footer class="fixed-bottom py-2" style="background-color: #0F2E3D;"><p class="mb-0" style="color: rgba(255, 255, 255, 0.8);">© Copyright 2023</p></footer>
