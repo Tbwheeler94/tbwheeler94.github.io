@@ -1,11 +1,6 @@
 ---
 title: "Tom Wheeler"
 image: "img/Wheeler_Tom_MESM_Bren_002.png"
-links:
-  - label: Energy Transition
-    class: test
-  - label: Data Science
-  - label: Software Development
 site: distill::distill_website
 output:
   postcards::jolla

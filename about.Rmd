@@ -2,6 +2,5 @@
 title: "About me"
 description: |
   Developer and analyst excited about the energy transition.
+site: distill::distill_article
 ---
-
-<img style="width:130%; position: relative; left: 50%; transform: translateX(-50%);" src="img/wordcloud.png"></img>

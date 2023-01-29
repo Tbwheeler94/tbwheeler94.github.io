@@ -73,6 +73,10 @@ d-appendix {
   --bkgd-color:       #0F2E3D;
 }
 
+hr {
+  display: none;
+}
+
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 

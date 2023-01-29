@@ -10,8 +10,8 @@ words <- c("energy transition", "R", "Python", "grid resilience","distributed en
 
 df <- tibble(word=words, freq=1)
 
-wordcloud <- wordcloud2(data=df, size=.5, color = "random-light", shape="circle", gridSize = 25, ellipticity = 0.25)
+wordcloud <- wordcloud2(data=df, size=.5, color = rep_len( c("#2171b5","#6baed6", "#bdd7e7", "#d5cfff", "#aaaaaa"), nrow(df) ), shape="circle", gridSize = 30, ellipticity = 0.25)
 saveWidget(wordcloud, "tmp.html", selfcontained = F)
-webshot::webshot("tmp.html","img/wordcloud.png",vwidth = 2500, vheight = 1231.5)
+webshot::webshot("tmp.html","img/wordcloud.png",vwidth = 3000, vheight = 1050.5)
 ```
 
