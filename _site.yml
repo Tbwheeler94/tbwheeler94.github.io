@@ -3,15 +3,9 @@ title: "TW"
 description: |
   TW
 output_dir: "docs"
+favicon: img/energy_icon.ico
 navbar:
   search: false
-  left:
-    - icon: fab fa-github
-      href: https://github.com/Tbwheeler94
-    - icon: fab fa-linkedin
-      href: https://linkedin.com/in/thomaswheeler94
-    - icon: far fa-envelope
-      href: mailto:tbwheeler94@gmail.com
   right:
     - text: "Home"
       href: index.html
@@ -19,7 +13,7 @@ navbar:
       href: about.html
     - text: "CV"
       href: CV.html
-    - text: "Recent Projects"
+    - text: "Experience & Projects"
       href: blog.html
 
 theme: postcards.css
