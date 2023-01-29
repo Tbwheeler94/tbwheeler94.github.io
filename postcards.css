@@ -73,6 +73,9 @@ d-appendix {
   --bkgd-color:       #0F2E3D;
 }
 
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
 hr {
   display: none;
 }
@@ -88,7 +91,3 @@ hr {
 .icon-link:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
-/*-- Additional custom styles --*/
-/* Add any additional CSS rules below                      */
-

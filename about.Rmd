@@ -1,6 +1,74 @@
 ---
-title: "About me"
-description: |
-  Developer and analyst excited about the energy transition.
-site: distill::distill_article
+title: "About Tom"
+image: "images/Wheeler_Tom_MESM_Bren_002.png"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/in/thomaswheeler94"
+  - label: GitHub
+    url: "https://github.com/Tbwheeler94"
+  - label: Email
+    url: "mailto:tbwheeler94@gmail.com"
+site:
+  distill::distill_article:
+    includes:
+        in_header: bootstrap.html # added this to be able to display favicon
+output:
+  postcards::trestles
 ---
+
+<h2>Bio</h2>
+
+Tom Wheeler is a web developer and energy data analyst with experience building dashboards and data visualizations in the energy, aquaculture, and agriculture industries. Currently developing a dashboard to calculate the future economic value of solar projects in California, Tom is excited about the energy transition and is looking for developer/analyst positions in the energy industry. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom developed a dashboard to help climate policy-makers and energy modelers visualize trends in data center energy use by top technology companies. 
+
+<h2>Past Projects & Experience</h2>
+
+<div class="p-2">
+<div id="icon-list">
+<ul class="list-inline">
+<li class="list-inline-item">
+<a href="http://energyexplorer.io/" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;" >
+<img src="images/energy_icon.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
+energyexplorer.io
+</button>
+</a>
+</li>
+<li class="list-inline-item">
+<a href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
+</button>
+</a>
+</li>
+<li class="list-inline-item">
+<a href="https://drive.google.com/file/d/1rX0iia9U1DlmxjSa5MyBEejMjK2ZdH9P/view?usp=sharing" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<img src="images/scoot.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
+Masters Group Project
+</button>
+</a>
+</li>
+<li class="list-inline-item">
+<a href="blog.html" target="_blank">
+<button type="button" class="btn btn-dark mb-2">
+Other Analysis Projects & Experience
+</button>
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<h2>Education</h2>
+
+**University of California, Santa Barbara** | [Bren School](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management) | Santa Barbara, CA
+
+Masters of Environmental Science & Management | September 2020 - June 2022
+
+**University of California, Santa Diego** | [Data Science & Visualization Bootcamp](https://bootcamp.extension.ucsd.edu/data/) | San Diego, CA
+
+Certificate of Completion | January 2020 - June 2020
+
+**Santa Clara University** | Santa Clara, CA
+
+Bachelors of Environmental Science | September 2012 - June 2016
