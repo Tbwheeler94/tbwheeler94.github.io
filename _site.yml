@@ -1,9 +1,8 @@
 name: "."
 title: "TW"
 description: |
-  TW
+  Tom Wheeler's Website
 output_dir: "docs"
-favicon: img/energy_icon.ico
 navbar:
   search: false
   right:
@@ -15,6 +14,8 @@ navbar:
       href: CV.html
     - text: "Experience & Projects"
       href: blog.html
-
 theme: postcards.css
-output: distill::distill_article
+output:
+  distill::distill_article:
+    includes:
+        in_header: header.html # added this to be able to display favicon

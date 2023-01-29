@@ -6,34 +6,34 @@
       "description": "Developer and analyst excited about the energy transition.\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-01-29T10:41:35-08:00"
+      "last_modified": "2023-01-29T11:22:17-08:00"
     },
     {
       "path": "blog.html",
-      "title": "Experience & Projects",
+      "title": "Experience & projects",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-01-29T10:41:36-08:00"
+      "last_modified": "2023-01-29T11:22:19-08:00"
     },
     {
       "path": "CV.html",
       "title": "CV",
       "author": [],
       "contents": "\n\n\n\n\n\n\n",
-      "last_modified": "2023-01-29T10:41:39-08:00"
+      "last_modified": "2023-01-29T11:22:22-08:00"
     },
     {
       "path": "generatewordcloud.html",
       "author": [],
       "contents": "\n\n\nlibrary(wordcloud2)\nlibrary(RColorBrewer)\nlibrary(tibble)\nlibrary(htmlwidgets)\nlibrary(webshot)\nwebshot::install_phantomjs()\n\nwords <- c(\"energy transition\", \"R\", \"Python\", \"grid resilience\",\"distributed energy resources\",\"energy demand modeling\",\"data centers\",\"web development\",\"economic modeling\",\"data science\",\"sustainability\",\"Django\",\"R Shiny\",\"JavaScript\",\"geospatial analysis\",\"entrepreneurship\")\n\ndf <- tibble(word=words, freq=1)\n\nwordcloud <- wordcloud2(data=df, size=.5, color = rep_len( c(\"#2171b5\",\"#6baed6\", \"#bdd7e7\", \"#d5cfff\", \"#aaaaaa\"), nrow(df) ), shape=\"circle\", gridSize = 30, ellipticity = 0.25)\nsaveWidget(wordcloud, \"tmp.html\", selfcontained = F)\nwebshot::webshot(\"tmp.html\",\"img/wordcloud.png\",vwidth = 3000, vheight = 1050.5)\n\n\n\n\n\n\n\n",
-      "last_modified": "2023-01-29T10:41:48-08:00"
+      "last_modified": "2023-01-29T11:22:30-08:00"
     },
     {
       "path": "index.html",
-      "title": "Tom Wheeler",
+      "title": "Home",
       "author": [],
-      "contents": "\n\n          \n          \n          TW\n          \n          \n          Home\n          About\n          CV\n          Experience & Projects\n          ☰\n          \n          \n      \n        \n          \n            Tom Wheeler\n          \n          \n            \n              \n              \n              M.S., Bren School of Environmental Science &\n              Management\n              \n              \n              University of California, Santa Barbara\n              \n              \n              \n              Software developer & energy data analyst living in San\n              Diego. Currently developing a dashboard to calculate the\n              value of a utility-scale front-of-meter solar energy\n              generation project in CA. I love surfing, daily\n              meditation, and nerding out on energy.\n              \n              \n              \n              \n              \n              \n              \n              \n              \n              © Copyright 2023\n              \n              \n            \n              \n              \n              M.S., Bren School of Environmental Science &\n              Management\n              \n              \n              University of California, Santa Barbara\n              \n              \n              \n              Software developer & energy data analyst living in San\n              Diego. Currently developing a dashboard to calculate the\n              value of a utility-scale front-of-meter solar energy\n              generation project in CA. I love surfing, daily\n              meditation, and nerding out on energy.\n              \n              \n              \n              \n              \n              \n              \n              \n              \n              © Copyright 2023\n              \n              \n          \n\n          \n            \n              \n          \n\n          \n            \n              \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2023-01-29T10:41:49-08:00"
+      "contents": "\n\n          \n          \n          TW\n          \n          \n          Home\n          About\n          CV\n          Experience & Projects\n          ☰\n          \n          \n      \n        \n          \n            Home\n          \n          \n            \n              \n              \n              M.S., Bren School of Environmental Science &\n              Management\n              \n              \n              University of California, Santa Barbara\n              \n              \n              \n              Software developer & energy data analyst living in San\n              Diego. Currently developing a dashboard to calculate the\n              value of a utility-scale front-of-meter solar energy\n              generation project in CA. I love surfing, daily\n              meditation, and nerding out on energy.\n              \n              \n              \n              \n              \n              \n              \n              \n              \n              © Copyright 2023\n              \n              \n            \n              \n              \n              M.S., Bren School of Environmental Science &\n              Management\n              \n              \n              University of California, Santa Barbara\n              \n              \n              \n              Software developer & energy data analyst living in San\n              Diego. Currently developing a dashboard to calculate the\n              value of a utility-scale front-of-meter solar energy\n              generation project in CA. I love surfing, daily\n              meditation, and nerding out on energy.\n              \n              \n              \n              \n              \n              \n              \n              \n              \n              © Copyright 2023\n              \n              \n          \n\n          \n            \n              \n          \n\n          \n            \n              \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2023-01-29T11:22:31-08:00"
     },
     {
       "path": "portfolio.html",
@@ -41,7 +41,7 @@
       "description": "A gallery of my previous data science projects",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-01-29T10:41:49-08:00"
+      "last_modified": "2023-01-29T11:22:31-08:00"
     }
   ],
   "collections": ["posts/posts.json"]

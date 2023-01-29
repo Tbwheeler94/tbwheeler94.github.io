@@ -10,7 +10,7 @@ library(tidyverse)
 
 ```
 
-<img style="width:100%; position: relative; left: 50%; transform: translateX(-50%);" src="img/wordcloud_post.png"></img>
+<img style="width:100%; position: relative; left: 50%; transform: translateX(-50%);" src="images/wordcloud_post.png"></img>
 
 ```{r echo = FALSE, message=FALSE, fig.align='center', fig.pos='H', out.width = "100%", out.height = "900px"}
 knitr::include_graphics("resume.pdf")

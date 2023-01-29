@@ -1,4 +1,4 @@
 ---
-title: "Experience & Projects" 
+title: "Experience & projects" 
 listing: posts
 ---

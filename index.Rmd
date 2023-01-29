@@ -1,6 +1,6 @@
 ---
-title: "Tom Wheeler"
-image: "img/Wheeler_Tom_MESM_Bren_002.png"
+title: "Home"
+image: "images/Wheeler_Tom_MESM_Bren_002.png"
 site: distill::distill_website
 output:
   postcards::jolla
