@@ -76,10 +76,6 @@ d-appendix {
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 
-body {
-  overflow-y: hidden;
-}
-
 hr {
   display: none;
 }

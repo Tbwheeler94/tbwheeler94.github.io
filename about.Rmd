@@ -93,3 +93,9 @@ Certificate of Completion | January 2020 - June 2020
 Bachelors of Environmental Science | September 2012 - June 2016
 
 <br>
+
+<style>
+body {
+  overflow-y: hidden;
+}
+</style>

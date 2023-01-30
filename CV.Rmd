@@ -1,5 +1,9 @@
 ---
 title: "CV"
+site:
+  distill::distill_article:
+    includes:
+        in_header: pdfjs.html # added this to be able to display favicon
 ---
 
 ```{r setup, include=FALSE}
@@ -12,6 +16,4 @@ library(tidyverse)
 
 <img style="width:100%; position: relative; left: 50%; transform: translateX(-50%);" src="images/wordcloud_post.png"></img>
 
-```{r echo = FALSE, message=FALSE, fig.align='center', fig.pos='H', out.width = "100%", out.height = "900px"}
-knitr::include_graphics("resume.pdf")
-```
+<iframe title="CV_PDF" src="resume.pdf" width="100%" height="800px"></iframe>
