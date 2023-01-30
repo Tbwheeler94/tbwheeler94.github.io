@@ -16,15 +16,15 @@ output:
   postcards::trestles
 ---
 
-<h2>Bio</h2>
+<h4>Bio</h4>
 
 Tom Wheeler is a web developer and energy data analyst with experience building dashboards and data visualizations in the energy, aquaculture, and agriculture industries. Currently developing a dashboard to calculate the future economic value of solar projects in California, Tom is excited about the energy transition and is looking for developer/analyst positions in the energy industry. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom developed a dashboard to help climate policy-makers and energy modelers visualize trends in data center energy use by top technology companies. 
 
-<h2>Past Projects & Experience</h2>
+<h4>Web Apps</h4>
 
 <div class="p-2">
 <div id="icon-list">
-<ul class="list-inline">
+<ul class="list-inline" style="margin-bottom: .4em;">
 <li class="list-inline-item">
 <a href="http://energyexplorer.io/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;" >
@@ -39,7 +39,15 @@ energyexplorer.io
 <img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
 </button>
 </a>
-</li>
+</ul>
+</div>
+</div>
+
+<h4>Data Analysis & Other Projects</h4>
+
+<div class="p-2">
+<div id="icon-list">
+<ul class="list-inline" style="margin-bottom: .4em;">
 <li class="list-inline-item">
 <a href="https://drive.google.com/file/d/1rX0iia9U1DlmxjSa5MyBEejMjK2ZdH9P/view?usp=sharing" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
@@ -49,9 +57,17 @@ Masters Group Project
 </a>
 </li>
 <li class="list-inline-item">
+<a href="https://drive.google.com/file/d/1T9Vs4jJLxqb8o2ce6xbx5w-nMlO8wIyE/view?usp=sharing" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<img src="images/building.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
+Energy Demand Modeling
+</button>
+</a>
+</li>
+<li class="list-inline-item">
 <a href="blog.html" target="_blank">
 <button type="button" class="btn btn-dark mb-2">
-Other Analysis Projects & Experience
+Other Projects & Experience
 </button>
 </a>
 </li>
@@ -59,16 +75,21 @@ Other Analysis Projects & Experience
 </div>
 </div>
 
-<h2>Education</h2>
+<h4>Tools I've Worked With</h4>
 
-**University of California, Santa Barbara** | [Bren School](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management) | Santa Barbara, CA
+**Languages & web development frameworks:** R, R Shiny, Python, Django, JavaScript <br>
+**Modeling & analysis:** Geospatial analysis, Seasonal decomposition, Value of information analysis, Energy demand analysis <br>
+**Currently (re)learning:** PostgreSQL/pgAdmin
 
+<h4>Education</h4>
+
+**University of California, Santa Barbara** | [Bren School](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management) | Santa Barbara, CA <br>
 Masters of Environmental Science & Management | September 2020 - June 2022
 
-**University of California, Santa Diego** | [Data Science & Visualization Bootcamp](https://bootcamp.extension.ucsd.edu/data/) | San Diego, CA
-
+**University of California, San Diego** | [Data Science & Visualization Bootcamp](https://bootcamp.extension.ucsd.edu/data/) | San Diego, CA <br>
 Certificate of Completion | January 2020 - June 2020
 
-**Santa Clara University** | Santa Clara, CA
-
+**Santa Clara University** | Santa Clara, CA <br>
 Bachelors of Environmental Science | September 2012 - June 2016
+
+<br>
