@@ -1,6 +1,6 @@
 ---
 title: "About Tom"
-image: "images/Wheeler_Tom_MESM_Bren_002.png"
+image: "images/Wheeler_Tom_MESM_Bren_002.jpg"
 links:
   - label: LinkedIn
     url: "https://linkedin.com/in/thomaswheeler94"
@@ -16,6 +16,11 @@ output:
   postcards::trestles
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
 <h4>Bio</h4>
 
 Tom Wheeler is a web developer and energy data analyst with experience building dashboards and data visualizations in the energy, aquaculture, and agriculture industries. Currently developing a dashboard to calculate the future economic value of solar projects in California, Tom is excited about the energy transition and is looking for developer/analyst positions in the energy industry. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom developed a dashboard to help climate policy-makers and energy modelers visualize trends in data center energy use by top technology companies. 
@@ -26,19 +31,35 @@ Tom Wheeler is a web developer and energy data analyst with experience building 
 <div id="icon-list">
 <ul class="list-inline" style="margin-bottom: .4em;">
 <li class="list-inline-item">
-<a href="http://energyexplorer.io/" target="_blank">
-<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;" >
+<span data-toggle="tooltip" title="Dashboard not optimized for small screens. View on large screen (>900px) to enable button." class="hide-tooltip">
+<a class="disable-button" href="http://energyexplorer.io/" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<img src="images/energy_icon.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
+energyexplorer.io
+</button>
+</a>
+</span>
+<a class="large-screen-button" style="display:none;" href="http://energyexplorer.io/" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
 <img src="images/energy_icon.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
 energyexplorer.io
 </button>
 </a>
 </li>
 <li class="list-inline-item">
-<a href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
+<span data-toggle="tooltip" title="Dashboard not optimized for small screens. View on large screen (>900px) to enable button." class="hide-tooltip">
+<a class="disable-button" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
 <img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
 </button>
 </a>
+</span>
+<a class="large-screen-button" style="display:none;" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
+<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
+</button>
+</a>
+</li>
 </ul>
 </div>
 </div>
@@ -95,7 +116,36 @@ Bachelors of Environmental Science | September 2012 - June 2016
 <br>
 
 <style>
-body {
-  overflow-y: hidden;
-}
+
+  @media screen and (min-width: 990px) {
+      body {
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+  }
+  
+  @media screen and (min-width: 900px) {
+      .hide-tooltip {
+        pointer-events: none;
+        display: none;
+      }
+      .large-screen-button {
+        display: block !important;
+      }
+    }
+    
+  @media screen and (max-width: 900px) {
+      .disable-button {
+        pointer-events: none;
+      }
+    }
+    
 </style>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  document.getElementById("disable-button-1").setAttribute();
+  document.getElementById("disable-button-1").setAttribute("data-toggle", "tooltip");
+</script>
