@@ -70,20 +70,29 @@ energyexplorer.io
 <div id="icon-list">
 <ul class="list-inline" style="margin-bottom: .4em;">
 <li class="list-inline-item">
-<a href="https://drive.google.com/file/d/1rX0iia9U1DlmxjSa5MyBEejMjK2ZdH9P/view?usp=sharing" target="_blank">
-<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<div class="dropdown">
+<button style="display: inline-flex; align-items: center;" class="btn btn-dark mb-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <img src="images/scoot.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
 Masters Group Project
 </button>
-</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="https://drive.google.com/file/d/1kOiZjRxo2O9XaCWlGE0AmN6VlNDYeiUJ/view?usp=share_link">Executive Summary</a>
+<a class="dropdown-item" href="https://drive.google.com/file/d/1FYaE1codVbUPdLRlSjf28ttaZBUjcIEl/view?usp=sharing">Final Report</a>
+<a style="margin-bottom: -15px;" class="dropdown-item" href="https://github.com/marianoviz/GP_production_model">Github Repo</a>
+</div>
+</div>
 </li>
 <li class="list-inline-item">
-<a href="https://drive.google.com/file/d/1T9Vs4jJLxqb8o2ce6xbx5w-nMlO8wIyE/view?usp=sharing" target="_blank">
-<button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
+<div class="dropdown">
+<button style="display: inline-flex; align-items: center;" class="btn btn-dark mb-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <img src="images/building.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
 Energy Demand Modeling
 </button>
-</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<a class="dropdown-item" href="https://drive.google.com/file/d/1P5F7BhFH8PXVnmV9oKE1bBj8lgG9WsRC/view?usp=share_link">Final report</a>
+<a style="margin-bottom: -15px;" class="dropdown-item" href="https://drive.google.com/drive/folders/1rvqtygHnYaNnRsKbAA4dueROwxt3unek?usp=sharing">Data analysis spreadsheets</a>
+</div>
+</div>
 </li>
 <li class="list-inline-item">
 <a href="blog.html" target="_blank">
@@ -145,7 +154,6 @@ Bachelors of Environmental Science | September 2012 - June 2016
 <script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
+    $('.dropdown-toggle').dropdown()
   })
-  document.getElementById("disable-button-1").setAttribute();
-  document.getElementById("disable-button-1").setAttribute("data-toggle", "tooltip");
 </script>
