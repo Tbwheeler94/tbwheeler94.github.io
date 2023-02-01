@@ -11,7 +11,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "CV"
-      href: https://drive.google.com/file/d/1DrcoQz0_K1Y8MaXPIjuO1KJv-kb6FAAm/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
+      href: https://drive.google.com/file/d/1s2NKEqstzzjMG5UZCiOttSUQVZXafGi1/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
     - text: "Experience & Projects"
       href: blog.html
 theme: postcards.css
