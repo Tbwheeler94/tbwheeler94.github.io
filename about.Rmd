@@ -23,7 +23,7 @@ library(knitr)
 
 <h4>Bio</h4>
 
-Tom Wheeler is a web developer and energy data analyst with experience building interactive dashboards and data visualizations in the energy, aquaculture, and agriculture industries. Currently developing a dashboard to calculate the future economic value of solar with battery projects in California, Tom is excited about the energy transition and is looking for developer/analyst positions in the energy industry. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom advanced the development of a data visualization dashboard (scheduled for public release in summer 2023) to help international climate policy-makers and data center energy modelers better understand trends in data center energy use by the top 50+ global technology companies.
+Tom Wheeler is a web developer and energy data analyst working at the intersection of climate and energy. Currently developing a dashboard to calculate the future economic value of solar with battery projects in California, Tom is excited about the energy transition and is looking for developer/analyst positions in the energy industry. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom advanced the development of a data visualization dashboard (scheduled for public release in summer 2023) to help international climate policy-makers and data center energy modelers better understand trends in data center energy use by the top 50+ global technology companies.
 
 <h4>Web Apps</h4>
 
