@@ -10,8 +10,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-    - text: "CV"
-      href: https://drive.google.com/file/d/1B8pu_m6jvjfZHiuE6iCe4jBrfZTzczhz/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
+    - text: "Resume"
+      href: https://drive.google.com/file/d/1RFZaz-sOfg9LErZ38vFG0B3e9vXkIXXQ/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
     - text: "Experience & Projects"
       href: blog.html
 theme: postcards.css
