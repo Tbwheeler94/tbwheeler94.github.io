@@ -11,9 +11,11 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Resume"
-      href: https://drive.google.com/file/d/1RFZaz-sOfg9LErZ38vFG0B3e9vXkIXXQ/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
+      href: https://drive.google.com/file/d/1Sx88MF1r8_asat_iOzym28THDIcGSqRh/view?usp=sharing # no longer using CV.Rmd to render CV page, word cloud is still there though
     - text: "Experience & Projects"
       href: blog.html
+    - text: "Contact"
+      href: mailto:tbwheeler94@gmail.com
 theme: postcards.css
 output:
   distill::distill_article:

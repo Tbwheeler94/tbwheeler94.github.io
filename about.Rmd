@@ -54,13 +54,13 @@ energyexplorer.io
 </button>
 </a>
 </span>
-<a class="large-screen-button" style="display:none;" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
-<span data-toggle="tooltip" title="This app is still in development and is for demonstration purposes only. Please do not share this website until it officially goes live in summer 2023.">
+<span data-toggle="tooltip" title="This app is still under development and scheduled for launch in summer 2023. Please contact me for a live demonstration.">
+<a class="large-screen-button" style="display:none; pointer-events: none;" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
 <img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
 </button>
-</span>
 </a>
+</span>
 </li>
 </ul>
 </div>
