@@ -32,14 +32,14 @@ Tom Wheeler is a web developer and energy data analyst working at the intersecti
 <ul class="list-inline" style="margin-bottom: .4em;">
 <li class="list-inline-item">
 <span data-toggle="tooltip" title="Dashboard not optimized for small screens. View on large screen (>900px) to enable button." class="hide-tooltip">
-<a class="disable-button" href="http://energyexplorer.io/" target="_blank">
+<a class="disable-button" href="https://energy-explorer.herokuapp.com/site-finder/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
 <img src="images/energy_icon.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
 energyexplorer.io
 </button>
 </a>
 </span>
-<a class="large-screen-button" style="display:none;" href="http://energyexplorer.io/" target="_blank">
+<a class="large-screen-button" style="display:none;" href="https://energy-explorer.herokuapp.com/site-finder/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
 <img src="images/energy_icon.svg" style="float:left; margin-right:0.5em; height: 1.5em; width: 1.5em;"></img>
 energyexplorer.io
