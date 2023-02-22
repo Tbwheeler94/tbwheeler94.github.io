@@ -10,6 +10,8 @@ output:
     self_contained: false
     theme: space
     code_folding: hide
+categories:
+  - data-visualization
 ---
 
 ### Overview

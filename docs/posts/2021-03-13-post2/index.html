@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -111,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Exploratory report of mountain yellow-legged frog (Rana muscosa) abundance data recorded by the Sierra Lakes Inventory Project"]},{"type":"character","attributes":{},"value":["This report provides an exploratory overview of mountain yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes Inventory Project (SLIP) from 1995-2002."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["03-07-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","theme","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["space"]},{"type":"character","attributes":{},"value":["hide"]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Exploratory report of mountain yellow-legged frog (Rana muscosa) abundance data recorded by the Sierra Lakes Inventory Project"]},{"type":"character","attributes":{},"value":["This report provides an exploratory overview of mountain yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes Inventory Project (SLIP) from 1995-2002."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["03-07-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","theme","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["space"]},{"type":"character","attributes":{},"value":["hide"]}]}]},{"type":"character","attributes":{},"value":["data-visualization"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2106,8 +2107,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2156,8 +2157,13 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="d-title">
 <h1>Exploratory report of mountain yellow-legged frog (Rana muscosa) abundance data recorded by the Sierra Lakes Inventory Project</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../blog.html#category:data-visualization" class="dt-tag">data-visualization</a>
+</div>
 <!--/radix_placeholder_categories-->
-<p><p>This report provides an exploratory overview of mountain yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes Inventory Project (SLIP) from 1995-2002.</p></p>
+<p><p>This report provides an exploratory overview of mountain
+yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes
+Inventory Project (SLIP) from 1995-2002.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2168,10 +2174,24 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 <div class="d-article">
 <h3 id="overview">Overview</h3>
-<p>This report provides an exploratory overview of mountain yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes Inventory Project (SLIP) from 1995-2002. The original objective of SLIP was to describe impacts of non-native fish on lake communities, but SLIP data has subsequently enabled study of additional ecological issues, including regional amphibian declines and their impacts on communities, and impacts of non-native fish on terrestrial species. In addition, these data are being used to develop fish removal efforts to restore aquatic ecosystems and recover endangered amphibians.</p>
+<p>This report provides an exploratory overview of mountain
+yellow-legged frog (Rana muscosa) abundance recorded by the Sierra Lakes
+Inventory Project (SLIP) from 1995-2002. The original objective of SLIP
+was to describe impacts of non-native fish on lake communities, but SLIP
+data has subsequently enabled study of additional ecological issues,
+including regional amphibian declines and their impacts on communities,
+and impacts of non-native fish on terrestrial species. In addition,
+these data are being used to develop fish removal efforts to restore
+aquatic ecosystems and recover endangered amphibians.</p>
 <p><img src="Amphibian_Map.png" data-align="center" /></p>
 <h3 id="data">Data</h3>
-<p>This data describes the physical characteristics of and surveyed aquatic communities for &gt; 8,000 lentic water bodies in the southern Sierra Nevada, including lakes, ponds, marshes, and meadows. The SLIP data is stored in a relational database that collectively describes water bodies (e.g., depth, elevation, location), surveys (conditions, effort), and communities (including approximately 170 fish, amphibian, reptile, benthic macroinvertebrate, and zooplankton taxa).</p>
+<p>This data describes the physical characteristics of and surveyed
+aquatic communities for &gt; 8,000 lentic water bodies in the southern
+Sierra Nevada, including lakes, ponds, marshes, and meadows. The SLIP
+data is stored in a relational database that collectively describes
+water bodies (e.g., depth, elevation, location), surveys (conditions,
+effort), and communities (including approximately 170 fish, amphibian,
+reptile, benthic macroinvertebrate, and zooplankton taxa).</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -2200,8 +2220,8 @@ hide
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Wrangle data to extract mountain yellow-legged frog (Rana muscosa) count each year across all water bodies</span>
 <span class='va'>sierra_amphibians</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a></span><span class='op'>(</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"_posts"</span>, <span class='st'>"post_data"</span>, <span class='st'>"sierra_amphibians.xlsx"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#read in amphibian excel file</span>
   <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>amphibian_species</span> <span class='op'>==</span> <span class='st'>"RAMU"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#filter by RAMU</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>survey_date <span class='op'>=</span> <span class='fu'><a href='http://lubridate.tidyverse.org/reference/ymd.html'>ymd</a></span><span class='op'>(</span><span class='va'>survey_date</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#convert survey date column to an R readable date formate</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>record_year <span class='op'>=</span> <span class='fu'><a href='http://lubridate.tidyverse.org/reference/year.html'>year</a></span><span class='op'>(</span><span class='va'>survey_date</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#extract only year value and put in new coluumn record_year</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>survey_date <span class='op'>=</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>ymd</a></span><span class='op'>(</span><span class='va'>survey_date</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#convert survey date column to an R readable date formate</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>record_year <span class='op'>=</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/year.html'>year</a></span><span class='op'>(</span><span class='va'>survey_date</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#extract only year value and put in new coluumn record_year</span>
   <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>amphibian_life_stage</span> <span class='op'>!=</span> <span class='st'>"EggMass"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#filter our EggMass values</span>
   <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>record_year</span>, <span class='va'>amphibian_life_stage</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'>#group by year then amphibian lifestage to get values for each life stage by year</span>
   <span class='fu'>count</span><span class='op'>(</span><span class='op'>)</span> <span class='co'># get counts for each, put into column "n"</span>
@@ -2265,16 +2285,32 @@ hide
 </details>
 <p><img src="post2_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
-<p><strong>Figure 1:</strong> These figures explore amphibian abundance data recorded by the Sierra Lakes Inventory Project. The top line chart graphs the total mountain yellow-legged frog (Rana muscosa) count each year across all water bodies, by life stage excluding the ‘EggMass’ level. The column graph contains total counts of combined adult and subadult endangered mountain yellow-legged frogs (Rana muscosa) observed in the 5 lakes with the greatest total observed counts across all years of the study.</p>
+<p><strong>Figure 1:</strong> These figures explore amphibian abundance
+data recorded by the Sierra Lakes Inventory Project. The top line chart
+graphs the total mountain yellow-legged frog (Rana muscosa) count each
+year across all water bodies, by life stage excluding the ‘EggMass’
+level. The column graph contains total counts of combined adult and
+subadult endangered mountain yellow-legged frogs (Rana muscosa) observed
+in the 5 lakes with the greatest total observed counts across all years
+of the study.</p>
 <h3 id="summary">Summary</h3>
 <p>This exploratory data analysis revealed:</p>
 <ul>
-<li>For most years, counts of mountain yellow-legged frog tadpoles were higher relative to adult and subadult populations across all water bodies</li>
-<li>Lake 50183 exhibited the largest number of observed counts relative to other lakes.</li>
+<li>For most years, counts of mountain yellow-legged frog tadpoles were
+higher relative to adult and subadult populations across all water
+bodies</li>
+<li>Lake 50183 exhibited the largest number of observed counts relative
+to other lakes.</li>
 </ul>
 <h3 id="citations">Citations</h3>
-<p>Knapp, R.A., C. Pavelka, E.E. Hegeman, and T.C. Smith. 2020. The Sierra Lakes Inventory Project: Non-Native fish and community composition of lakes and ponds in the Sierra Nevada, California ver 2. Environmental Data Initiative. <a href="https://doi.org/10.6073/pasta/d835832d7fd00d9e4466e44eea87fab3" class="uri">https://doi.org/10.6073/pasta/d835832d7fd00d9e4466e44eea87fab3</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Knapp, R.A., C. Pavelka, E.E. Hegeman, and T.C. Smith. 2020. The
+Sierra Lakes Inventory Project: Non-Native fish and community
+composition of lakes and ponds in the Sierra Nevada, California ver 2.
+Environmental Data Initiative. <a
+href="https://doi.org/10.6073/pasta/d835832d7fd00d9e4466e44eea87fab3"
+class="uri">https://doi.org/10.6073/pasta/d835832d7fd00d9e4466e44eea87fab3</a></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

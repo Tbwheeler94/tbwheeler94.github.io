@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -87,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
 <title>TW: Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage</title>
 
-<meta property="description" itemprop="description" content="A short description of the post."/>
+<meta property="description" itemprop="description" content="This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements."/>
 
 
 <!--  https://schema.org/Article -->
@@ -98,25 +99,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="TW: Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="A short description of the post."/>
+<meta property="og:description" content="This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="TW"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="TW: Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage"/>
-<meta property="twitter:description" content="A short description of the post."/>
+<meta property="twitter:description" content="This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements."/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage"]},{"type":"character","attributes":{},"value":["A short description of the post."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["03-03-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","theme","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["space"]},{"type":"character","attributes":{},"value":["hide"]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage"]},{"type":"character","attributes":{},"value":["This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["03-03-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","theme","code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["space"]},{"type":"character","attributes":{},"value":["hide"]}]}]},{"type":"character","attributes":{},"value":["data-visualization","heirachical-clustering","statistical-analysis"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["post1_files/figure-html5/unnamed-chunk-3-1.png"]}
+  {"type":"character","attributes":{},"value":["post1_files/anchor-4.2.2/anchor.min.js","post1_files/bowser-1.9.3/bowser.min.js","post1_files/distill-2.2.21/template.v2.js","post1_files/figure-html5/unnamed-chunk-3-1.png","post1_files/header-attrs-2.6.6/header-attrs.js","post1_files/jquery-1.11.3/jquery.min.js","post1_files/popper-2.6.0/popper.min.js","post1_files/tippy-6.2.7/tippy-bundle.umd.min.js","post1_files/tippy-6.2.7/tippy-light-border.css","post1_files/tippy-6.2.7/tippy.css","post1_files/tippy-6.2.7/tippy.umd.min.js","post1_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2106,8 +2107,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2129,7 +2130,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage","description":"A short description of the post.","authors":[{"author":"Thomas Wheeler","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-03T00:00:00.000+00:00","citationText":"Wheeler, 2021"}
+{"title":"Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage","description":"This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements.","authors":[{"author":"Thomas Wheeler","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-03T00:00:00.000+00:00","citationText":"Wheeler, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2156,8 +2157,15 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="d-title">
 <h1>Hierarchical clustering analysis of the Santa Barbara Coastal drainage area watershed by complete linkage</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../blog.html#category:data-visualization" class="dt-tag">data-visualization</a>
+  <a href="../../blog.html#category:heirachical-clustering" class="dt-tag">heirachical-clustering</a>
+  <a href="../../blog.html#category:statistical-analysis" class="dt-tag">statistical-analysis</a>
+</div>
 <!--/radix_placeholder_categories-->
-<p><p>A short description of the post.</p></p>
+<p><p>This report performs a hierarchical clustering analysis of Santa
+Barbara area watersheds by collection site using water chemistry
+measurements.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2168,9 +2176,24 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 <div class="d-article">
 <h3 id="overview">Overview</h3>
-<p>This report performs a hierarchical clustering analysis of Santa Barbara area watersheds by collection site using water chemistry measurements. To conduct the analysis, averages of all values are calculated for each site, then euclidean distances are calculated for each site (4 of the 13 original sites are dropped due to NA values) before complete linkage agglomerative hierarchical clustering is performed.</p>
+<p>This report performs a hierarchical clustering analysis of Santa
+Barbara area watersheds by collection site using water chemistry
+measurements. To conduct the analysis, averages of all values are
+calculated for each site, then euclidean distances are calculated for
+each site (4 of the 13 original sites are dropped due to NA values)
+before complete linkage agglomerative hierarchical clustering is
+performed.</p>
 <h3 id="data">Data</h3>
-<p>This data contains stream water chemistry measurements taken in Santa Barbara area watersheds, beginning in 2000. This dataset is ongoing, and data has been added approximately annually. Stream water samples are collected weekly during non-storm flows in winter, and bi-weekly during summer. During winter storms, samples are collected hourly (rising limb) or at 2-4 hour intervals (falling limb). Analytes sampled in the SBC LTER watersheds include dissolved nitrogen (nitrate, ammonium, total dissolved nitrogen); soluble reactive phosphorus (SRP); particulate organic carbon, nitrogen and phosphorus; total suspended sediments; and conductivity.</p>
+<p>This data contains stream water chemistry measurements taken in Santa
+Barbara area watersheds, beginning in 2000. This dataset is ongoing, and
+data has been added approximately annually. Stream water samples are
+collected weekly during non-storm flows in winter, and bi-weekly during
+summer. During winter storms, samples are collected hourly (rising limb)
+or at 2-4 hour intervals (falling limb). Analytes sampled in the SBC
+LTER watersheds include dissolved nitrogen (nitrate, ammonium, total
+dissolved nitrogen); soluble reactive phosphorus (SRP); particulate
+organic carbon, nitrogen and phosphorus; total suspended sediments; and
+conductivity.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -2228,8 +2251,13 @@ hide
 <p><img src="post1_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <h3 id="citation">Citation</h3>
-<p>Santa Barbara Coastal LTER and J. Melack. 2019. SBC LTER: Land: Stream chemistry in the Santa Barbara Coastal drainage area, ongoing since 2000 ver 16. Environmental Data Initiative. <a href="https://doi.org/10.6073/pasta/67a558a24ceed9a0a5bf5e46ab841174" class="uri">https://doi.org/10.6073/pasta/67a558a24ceed9a0a5bf5e46ab841174</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Santa Barbara Coastal LTER and J. Melack. 2019. SBC LTER: Land:
+Stream chemistry in the Santa Barbara Coastal drainage area, ongoing
+since 2000 ver 16. Environmental Data Initiative. <a
+href="https://doi.org/10.6073/pasta/67a558a24ceed9a0a5bf5e46ab841174"
+class="uri">https://doi.org/10.6073/pasta/67a558a24ceed9a0a5bf5e46ab841174</a>.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
