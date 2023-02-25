@@ -48,7 +48,7 @@ To develop these models we had 3 main tasks:
 - South 
 - West 
 
-Each region had the following unique modeling parameters: projected total heated/cooled floor area, projected annual heating/cooling degree days. Projected annual heating/cooling degree days is calculated by (1) calculating the mean temperature of a day (daily high + daily low/2) and subtracting by 65F (2) repeating this calculation for all days in 1 year and then summing. [Click here](https://www.weather.gov/key/climate_heat_cool#:~:text=Degree%20days%20are%20based%20on,two)%20and%2065%C2%B0F) for a more detailed explanation.
+Each region had the following unique modeling parameters: projected total heated/cooled floor area, projected annual heating/cooling degree days. Projected annual heating/cooling degree days is calculated by (1) calculating the mean temperature of a day (daily high + daily low/2) and subtracting by 65F (2) repeating this calculation for all days in 1 year and then summing. [Click here](https://www.weather.gov/key/climate_heat_cool#:~:text=Degree%20days%20are%20based%20on,two) for a more detailed explanation.
 
 3. Structure our model to account for the variability in effect our chosen LEES scenario policies would have on energy demand and emissions through 2050. We categorized the impact of our policies as follows:
 
