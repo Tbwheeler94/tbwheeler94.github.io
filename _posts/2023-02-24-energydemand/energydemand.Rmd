@@ -1,0 +1,135 @@
+---
+title: "Assessing a Low Energy and Emissions Pathway for Commercial Buildings from 2022 - 2050"
+description: |
+  An analysis of the projected change in energy demand and emissions from commercial buildings by implementing efficiency standards, financial incentives for new technologies, and building code updates.
+author:
+  - name: Thomas Wheeler
+date: 05-19-2022
+output:
+  distill::distill_article
+categories:
+  - energy-demand
+  - energy-transition
+  - energy-modeling
+  - data-visualization
+preview: buildings.jpeg
+---
+
+### Project overview
+
+This assessment was the final project for [Professor Eric Masanet's](https://bren.ucsb.edu/people/eric-masanet) [Energy Demand Analysis](https://bren.ucsb.edu/courses/esm-287) course taught at the [Bren School of Environmental Science & Management](https://bren.ucsb.edu/). The main goal of this project was to assess the potential impact energy demand reduction strategies could have on decarbonizing commercial buildings by 2050.
+
+To approach answering this question, my team and I were tasked with modeling 2 scenarios: 
+
+1. A baseline scenario where no energy demand reduction strategies are implemented.
+
+2. A low energy & emissions (LEES) scenario where efficiency standards, financial incentives for new technologies, and building code updates are implemented.
+
+And comparing the expected change in energy and emission by 2050 between the 2 scenarios.
+
+### Analysis Framework
+
+To develop these models we had 3 main tasks:
+
+1. Determine what energy services and the respective technologies providing these services we wanted to include in our modeling scope. We chose to model:
+
+- Space heating (district heating, electric heat pump, natural gas furnace, natural gas boiler)
+- Space cooling (electric air conditioner, electric chiller)
+- Water heating (natural gas tankless, electric tankless, heat pump)
+- Dishwasher
+- Lightbulbs (incandescent, fluorescent, LEDs)
+- Personal computer (desktop, laptop, monitor)
+- Refrigerator
+
+2. Account for variability in demand for energy services across different regions of the United States in our model parameters. We chose 4 regions:
+
+- Northeast
+- Midwest
+- South 
+- West 
+
+Each region had the following unique modeling parameters: projected total heated/cooled floor area, projected annual heating/cooling degree days. Projected annual heating/cooling degree days is calculated by (1) calculating the mean temperature of a day (daily high + daily low/2) and subtracting by 65F (2) repeating this calculation for all days in 1 year and then summing. [Click here](https://www.weather.gov/key/climate_heat_cool#:~:text=Degree%20days%20are%20based%20on,two)%20and%2065%C2%B0F) for a more detailed explanation.
+
+3. Structure our model to account for the variability in effect our chosen LEES scenario policies would have on energy demand and emissions through 2050. We categorized the impact of our policies as follows:
+
+- **Demand Avoidance** — reducing demand for energy in the first place. For example, changing the orientation of a building to benefit from passive lighting or using green architecture such as natural ventilation or green walls to reduce need for heating/cooling energy services.
+
+- **Fuel Switching** — reducing demand for energy or emissions intensity by switching from a high energy/emissions intensity technology to low energy energy/emissions intensity technology. For example, replacing a natural gas furnace with a heat pump.
+
+- **Energy Efficiency** — improving the efficiency of existing technology to reduce energy demand. For example, adopting a higher efficiency heat pump that uses less energy for each unit of heating output.
+
+### Excel Analysis Models
+
+[Baseline Heating & Cooling](https://docs.google.com/spreadsheets/d/1k_bQKMp6czVrrDZ7mt0kTldP2237Its-/edit#gid=572723875) \
+
+[LEES Heating & Cooling](https://docs.google.com/spreadsheets/d/1OEro91lIcXPMNVTVYMrSW5cbm2WV3uOY/edit#gid=572723875) \
+
+[Appliances](https://docs.google.com/spreadsheets/d/1hntHyaVOR5DUulQ-W67wbbfNKC05cwAG/edit#gid=1065995311) (includes both baseline & LEES) \
+
+### Results
+
+A detailed description of our analysis result can be read in our [final report](https://drive.google.com/file/d/1P5F7BhFH8PXVnmV9oKE1bBj8lgG9WsRC/view).
+
+### Data
+
+1. EPA Office of Air and Radiation, Climate Protection Partnerships Division. Light Bulb Revolution: EPA Predicts Widespread
+Consumer Adoption of LED Lighting by 2020 if Utility Programs Persist. U.S. EPA, 2017.
+https://www.energystar.gov/sites/default/files/asset/document/LBR_2017-LED-Takeover.pdf
+
+2. IEA (2018), The Future of Cooling; Preti and Caldeira (2015)
+
+3. Energy STAR. 2022. “ENERGY STAR Certified Commercial Water Heaters.” Energy STAR. 2022.
+https://www.energystar.gov/productfinder/product/certified-commercial-water-heaters/results.
+
+4. Energy STAR. n.d. “About Energy Efficiency.” Energy STAR. Accessed June 6, 2022.
+https://www.energystar.gov/about/about_energy_efficiency.
+
+5. OAR US EPA, “Using Green Roofs to Reduce Heat Islands,” Overviews and Factsheets, last modified June 17, 2014, accessed
+June 1, 2022, https://www.epa.gov/heatislands/using-green-roofs-reduce-heat-islands.
+
+6. OAR US EPA, “Using Cool Roofs to Reduce Heat Islands,” Overviews and Factsheets, last modified June 17, 2014, accessed
+June 1, 2022, https://www.epa.gov/heatislands/using-cool-roofs-reduce-heat-islands.
+
+7. Biswas, Kaushik, Som S. Shrestha, Mahabir S. Bhandari, and Andre O. Desjarlais. 2016. “Insulation Materials for Commercial
+Buildings in North America: An Assessment of Lifetime Energy and Environmental Impacts.” Energy and Buildings 112 (January):
+256–69. https://doi.org/10.1016/j.enbuild.2015.12.013.
+
+8. U.S. Department of Energy. 2022. Enforcement Policy Statement-General Service Lamps.
+
+9. IEA (2021), Lighting, IEA, Paris. https://www.iea.org/reports/lighting
+
+10. EPA Office of Air and Radiation, Climate Protection Partnerships Division. Light Bulb Revolution: EPA Predicts Widespread
+Consumer Adoption of LED Lighting by 2020 if Utility Programs Persist. U.S. EPA, 2017.
+https://www.energystar.gov/sites/default/files/asset/document/LBR_2017-LED-Takeover.pdf
+
+11. Dunsky Energy Consulting. 2021. “Heating Electrification: Policies to Drive Ground-Source Heat Pump Adoption.” Heating,
+Refrigeration and Air Conditioning Institute of Canada (HRAI).
+
+12. Office of Energy Efficiency and Renewable Energy. n.d. “Energy Efficiency Policies and Programs.” Energy.Gov. Accessed June
+6, 2022. https://www.energy.gov/eere/slsc/energy-efficiency-policies-and-programs.
+
+13. EPA Office of Air and Radiation, Climate Protection Partnerships Division. Light Bulb Revolution: EPA Predicts Widespread
+Consumer Adoption of LED Lighting by 2020 if Utility Programs Persist. U.S. EPA, 2017.
+https://www.energystar.gov/sites/default/files/asset/document/LBR_2017-LED-Takeover.pdf
+
+14. EPA Office of Air and Radiation, Climate Protection Partnerships Division. Light Bulb Revolution: EPA Predicts Widespread
+Consumer Adoption of LED Lighting by 2020 if Utility Programs Persist. U.S. EPA, 2017.
+https://www.energystar.gov/sites/default/files/asset/document/LBR_2017-LED-Takeover.pdf
+
+15. Goodman Air Conditioning and Heating. n.d. “Generations of Heat Pumps.” Accessed June 6, 2022.
+https://www.goodmanmfg.com/resources/hvac-learning-center/?param1=before-you-buy&param2=what-generation-is-your-h
+eat-pump.
+
+16. Thomas A Deetjen et al 2021 Environ. Res. Lett. 16 084024. https://iopscience.iop.org/article/10.1088/1748-9326/ac10dc
+
+17. Chua, K. J., S. K. Chou, and W. M. Yang. 2010. “Advances in Heat Pump Systems: A Review.” Applied Energy 87 (12): 3611–24.
+https://doi.org/10.1016/j.apenergy.2010.06.014.
+
+18. IEA (2019), District heating needs flexibility to navigate the energy transition, IEA, Paris
+https://www.iea.org/commentaries/district-heating-needs-flexibility-to-navigate-the-energy-transition
+
+### Overview of Energy Demand Analysis course from syllabus
+
+"This course will introduce students to basic concepts and quantitative approaches for understanding and analyzing societal demand for energy. In the first half of the course, students will learn core energy analysis skills and principles including working with official energy statistics, quantification of energy services, projecting demand drivers, modeling technology stock turnover, embodied energy accounting, and constructing marginal abatement/cost curves. 
+
+In the second half of the course, students will apply this knowledge to construct a simplified (i.e., reduced scope) energy demand model for the United States, focusing on the buildings, transport, industrial, and food sectors. Students will also learn about major technological, behavioral, and policy strategies for transforming energy demand as a means of achieving climate objectives, and will apply their models in group projects to develop demand-sides scenarios and plans for deep decarbonization of the U.S. energy system."
