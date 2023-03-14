@@ -9,8 +9,7 @@ output:
   distill::distill_article
 categories:
   - energy-transition
-  - project-finance
-  - site-suitability
+  - economic-modeling
   - interactive-data-visualization
 preview: solar_farm.svg
 ---

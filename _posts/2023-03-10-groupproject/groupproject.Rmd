@@ -1,5 +1,5 @@
 ---
-title: "Master's Group Project"
+title: "Master's Group Consulting Project"
 description: |
   Assessing the Value of Environmental Information for Shellfish Aquaculture Farmers in British Columbia
 author:
@@ -8,7 +8,7 @@ date: 03-17-2022
 output:
   distill::distill_article
 categories:
-  - economic-analysis
+  - economic-modeling
   - consulting
 preview: scoot-logo.jpeg
 ---
@@ -36,11 +36,11 @@ Thomas Wheeler (project manager) \
 [Final presentation](https://vimeo.com/710598339?embedded=false&source=vimeo_logo&owner=115869184) \
 [Faculty review presentation](https://drive.google.com/file/d/1MxMPqVTcVUHUvITJi1TDw-y4nMlyEt3L/view) \
 
-### Project overview
+### What are group projects?
 
 Master’s Group Projects bring together teams of 4-5 students to solve environmental problems for a client. As project manager of my group, I served as primary client contact, facilitated team meetings, collaborated on project tasks, and directed project development from initial proposal to final deliverables. Learn more about group projects at the Bren school [here](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management/masters-group-projects).
 
-![**Figure 1:** Figure 2. Locations of shellfish facilities in 2020. Upper right inset is Baynes Sound.](bc_map.jpg){width=100%}
+![**Figure 2:** Locations of shellfish facilities in 2020. Upper right inset is Baynes Sound.](bc_map.jpg){width=100%}
 
 ### Summary of project
 

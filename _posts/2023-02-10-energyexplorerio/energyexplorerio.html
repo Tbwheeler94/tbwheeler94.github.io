@@ -50,16 +50,17 @@ color: #aaaaaa;
 }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-{ }
+{ color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } 
 code span.al { color: #ad0000; } 
 code span.an { color: #5e5e5e; } 
-code span.at { color: #20794d; } 
+code span.at { color: #657422; } 
 code span.bn { color: #ad0000; } 
 code span.bu { } 
-code span.cf { color: #007ba5; } 
+code span.cf { color: #00769e; } 
 code span.ch { color: #20794d; } 
 code span.cn { color: #8f5902; } 
 code span.co { color: #5e5e5e; } 
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; }
 code span.fu { color: #4758ab; } 
 code span.im { } 
 code span.in { color: #5e5e5e; } 
-code span.kw { color: #007ba5; } 
+code span.kw { color: #00769e; } 
 code span.op { color: #5e5e5e; } 
-code span.ot { color: #007ba5; } 
+code span.ot { color: #00769e; } 
 code span.pp { color: #ad0000; } 
-code span.sc { color: #20794d; } 
+code span.sc { color: #5e5e5e; } 
 code span.ss { color: #20794d; } 
 code span.st { color: #20794d; } 
 code span.va { color: #111111; } 
 code span.vs { color: #20794d; } 
 code span.wa { color: #5e5e5e; font-style: italic; } 
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>energyexplorer.io</title>
@@ -111,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; }
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["energyexplorer.io"]},{"type":"character","attributes":{},"value":["An interactive dashboard to calculate NPV and LCOE of utility-scale front-of-meter solar with battery projects in California.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["01-01-2023"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"character","attributes":{},"value":["energy-transition","project-finance","site-suitability","interactive-data-visualization"]},{"type":"character","attributes":{},"value":["solar_farm.svg"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["energyexplorer.io"]},{"type":"character","attributes":{},"value":["An interactive dashboard to calculate NPV and LCOE of utility-scale front-of-meter solar with battery projects in California.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Thomas Wheeler"]}]}]},{"type":"character","attributes":{},"value":["01-01-2023"]},{"type":"character","attributes":{},"value":["distill::distill_article"]},{"type":"character","attributes":{},"value":["energy-transition","economic-modeling","interactive-data-visualization"]},{"type":"character","attributes":{},"value":["solar_farm.svg"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -175,6 +177,7 @@ font-weight: 500;
 d-article table.gt_table td,
 d-article table.gt_table th {
 border-bottom: none;
+font-size: 100%;
 }
 .html-widget {
 margin-bottom: 2.0em;
@@ -285,6 +288,10 @@ d-article div.sourceCode pre {
 padding-left: 18px;
 font-size: 14px;
 }
+
+d-article pre.numberSource code > span {
+left: -2em;
+}
 d-article pre {
 font-size: 14px;
 }
@@ -366,9 +373,6 @@ margin-top: 0;
 position: relative;
 margin-bottom: 2.5em;
 margin-top: 1.5em;
-}
-.figure img {
-width: 100%;
 }
 .figure .caption {
 color: rgba(0, 0, 0, 0.6);
@@ -994,8 +998,9 @@ color: inherit;
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1091,7 +1096,22 @@ color: inherit;
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1102,6 +1122,31 @@ color: inherit;
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1201,6 +1246,8 @@ color: inherit;
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1223,7 +1270,7 @@ color: inherit;
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2298,7 +2345,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"energyexplorer.io","description":"An interactive dashboard to calculate NPV and LCOE of utility-scale front-of-meter solar with battery projects in California.","authors":[{"author":"Thomas Wheeler","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-01-01T00:00:00.000+00:00","citationText":"Wheeler, 2023"}
+{"title":"energyexplorer.io","description":"An interactive dashboard to calculate NPV and LCOE of utility-scale front-of-meter solar with battery projects in California.","authors":[{"author":"Thomas Wheeler","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-01-01T00:00:00.000-08:00","citationText":"Wheeler, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2311,15 +2358,12 @@ distill-header .nav a {
 <h1>energyexplorer.io</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">energy-transition</div>
-<div class="dt=tag">project-finance</div>
-<div class="dt=tag">site-suitability</div>
-<div class="dt=tag">interactive-data-visualization</div>
+<div class="dt-tag">energy-transition</div>
+<div class="dt-tag">economic-modeling</div>
+<div class="dt-tag">interactive-data-visualization</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>An interactive dashboard to calculate NPV and LCOE of
-utility-scale front-of-meter solar with battery projects in
-California.</p></p>
+<p><p>An interactive dashboard to calculate NPV and LCOE of utility-scale front-of-meter solar with battery projects in California.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2335,53 +2379,21 @@ California.</p></p>
 </a>
 </div>
 <h3 id="project-overview">Project overview</h3>
-<p><a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>
-is an independent project I developed as a master’s student at the <a href="https://bren.ucsb.edu/">Bren School of Environmental Science &amp;
-Management</a>. The main goal of the application to provide an
-intuitive, user-interactive dashboard for renewable energy developers to
-estimate the levelized cost of energy (LCOE) and net present value (NPV)
-of a proposed project at a desired location in California.</p>
-<p>The mathematical modeling and datasets used on the app’s backend were
-chosen with the guidance of <a href="https://bren.ucsb.edu/people/ranjit-deshmukh">Dr. Ranjit
-Deshmukh</a>.</p>
+<p><a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a> is an independent project I developed as a master’s student at the <a href="https://bren.ucsb.edu/">Bren School of Environmental Science &amp; Management</a>. The main goal of the application to provide an intuitive, user-interactive dashboard for renewable energy developers to estimate the levelized cost of energy (LCOE) and net present value (NPV) of a proposed project at a desired location in California.</p>
+<p>The mathematical modeling and datasets used on the app’s backend were chosen with the guidance of <a href="https://bren.ucsb.edu/people/ranjit-deshmukh">Dr. Ranjit Deshmukh</a>.</p>
 <h3 id="data">Data</h3>
-<p><a href="https://nsrdb.nrel.gov/">National Solar Radiation Database
-(NSRDB)</a> - Database of hourly and half-hourly solar radiation (global
-horizontal, direct normal, and diffuse horizontal irradiance) across the
-United States and in some international locations. This dataset is
-accessed using NREL’s <a href="https://developer.nrel.gov/docs/solar/nsrdb/python-examples/">Python
-API</a>.</p>
+<p><a href="https://nsrdb.nrel.gov/">National Solar Radiation Database (NSRDB)</a>
+- Database of hourly and half-hourly solar radiation (global horizontal, direct normal, and diffuse horizontal irradiance) across the United States and in some international locations. This dataset is accessed using NREL’s <a href="https://developer.nrel.gov/docs/solar/nsrdb/python-examples/">Python API</a>.</p>
 <p><a href="https://sam.nrel.gov/">NREL’s System Advisor Model (SAM)</a>
-- SAM is a model used to calculate energy generation and financial
-projections for a variety of renewable energy systems. <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>
-uses SAM’s energy generation model to convert solar radiation data from
-NSRDB to energy generation by a solar plant with user defined
-parameters. This tool is accessed using the <a href="https://pypi.org/project/NREL-PySAM/">NREL-PySAM package</a>.</p>
-<p><a href="http://oasis.caiso.com/mrioasis/logon.do">CAISO OAIS</a> -
-Database of real-time and historical data related to the ISO
-transmission system and its Market, such as system demand forecasts,
-transmission outage and capacity status, market prices and market result
-data. Click <a href="http://www.caiso.com/TodaysOutlook/Pages/prices.html">here</a> to
-view a realtime map of wholesale energy prices across California. The
-current version of <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>
-uses a static, one year hourly dataset from the HOLLISTR_1_N101 for all
-future price predictions. This dataset was manually extracted using the
-CAISO OASIS online downloader.</p>
-<p><a href="https://www.nrel.gov/docs/fy22osti/80694.pdf">U.S. Solar
-Photovoltaic System and Energy Storage Cost Benchmarks: Q1 2021</a> -
-This NREL report was used to define capex and fixed o&amp;m parameters
-used to calculated the levelized cost of energy (LCOE) in <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>.
-More about cost and performance parameters provided by NREL for
-electricity generating technologies can be found <a href="https://atb.nrel.gov/electricity/2022/index">here</a>.</p>
-<p><a href="https://www.nrel.gov/analysis/cambium.html">NREL’s Cambium
-Viewer</a> - Database and viewing tool developed by NREL to project
-future wholesale energy prices and marginal emission rates across the
-United States. Projections provided by Cambium were are not currently
-used in <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>.</p>
+- SAM is a model used to calculate energy generation and financial projections for a variety of renewable energy systems. <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a> uses SAM’s energy generation model to convert solar radiation data from NSRDB to energy generation by a solar plant with user defined parameters. This tool is accessed using the <a href="https://pypi.org/project/NREL-PySAM/">NREL-PySAM package</a>.</p>
+<p><a href="http://oasis.caiso.com/mrioasis/logon.do">CAISO OAIS</a>
+- Database of real-time and historical data related to the ISO transmission system and its Market, such as system demand forecasts, transmission outage and capacity status, market prices and market result data. Click <a href="http://www.caiso.com/TodaysOutlook/Pages/prices.html">here</a> to view a realtime map of wholesale energy prices across California. The current version of <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a> uses a static, one year hourly dataset from the HOLLISTR_1_N101 for all future price predictions. This dataset was manually extracted using the CAISO OASIS online downloader.</p>
+<p><a href="https://www.nrel.gov/docs/fy22osti/80694.pdf">U.S. Solar Photovoltaic System and Energy Storage Cost Benchmarks: Q1 2021</a>
+- This NREL report was used to define capex and fixed o&amp;m parameters used to calculated the levelized cost of energy (LCOE) in <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>. More about cost and performance parameters provided by NREL for electricity generating technologies can be found <a href="https://atb.nrel.gov/electricity/2022/index">here</a>.</p>
+<p><a href="https://www.nrel.gov/analysis/cambium.html">NREL’s Cambium Viewer</a>
+- Database and viewing tool developed by NREL to project future wholesale energy prices and marginal emission rates across the United States. Projections provided by Cambium were are not currently used in <a href="https://energy-explorer.herokuapp.com/site-finder/">energyexplorer.io</a>.</p>
 <h3 id="data-pipeline-analysis">Data pipeline &amp; analysis</h3>
-<p>Navigate to the <a href="https://energy-explorer.herokuapp.com/site-finder/data-pipeline">data
-pipeline</a> to see the process for remotely importing data and
-executing site calculations.</p>
+<p>Navigate to the <a href="https://energy-explorer.herokuapp.com/site-finder/data-pipeline">data pipeline</a> to see the process for remotely importing data and executing site calculations.</p>
 <h3 id="application-tech-stack">Application tech stack</h3>
 <p>Front-end:</p>
 <ul>
