@@ -13,7 +13,6 @@ categories:
   - consulting
 preview: svp.jpeg
 ---
-
 ### Consulting project team members
 
 Thomas Wheeler (project manager) \
@@ -29,14 +28,11 @@ Thomas Wheeler (project manager) \
 
 [Silicon Valley Power](https://www.siliconvalleypower.com/)
 
-### Key documents and links
-
-[Final report](https://docs.google.com/document/d/1Yhay_MlbjwYilLbVi4anF1zHTcWGXdRuuodwYNEr0fI/edit?usp=sharing) \
-[Final poster](https://drive.google.com/file/d/0B0Ppu0ggvYKbbFJpN3l4RWtFZTQ/view?resourcekey=0-bF0_a1GAKrrM1KO6OFhM6w) \
-
 ### What are capstone projects?
 
 Santa Clara University Environmental Science & Studies students form cross-disciplinary consulting teams and work to address a wide range of environmental issues, with the goal of providing research of value to a community partner or agency. Learn more about capstone projects [here](https://www.scu.edu/cas/ess/academic-programs/).
+
+### [Final poster](https://drive.google.com/file/d/0B0Ppu0ggvYKbbFJpN3l4RWtFZTQ/view?resourcekey=0-bF0_a1GAKrrM1KO6OFhM6w)
 
 ### Abstract
 
