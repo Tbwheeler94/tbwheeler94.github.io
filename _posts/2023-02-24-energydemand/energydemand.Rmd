@@ -70,6 +70,8 @@ Each region had the following unique modeling parameters: projected total heated
 
 A detailed description of our analysis result can be read in our [final report](https://drive.google.com/file/d/1P5F7BhFH8PXVnmV9oKE1bBj8lgG9WsRC/view).
 
+A summary of results can be viewed in our [final presentation](https://docs.google.com/presentation/d/1uQjMNfmHyYOhQDC0p-cNSrVDS4Q5eu_I/edit?usp=sharing&ouid=117367242494310945181&rtpof=true&sd=true).
+
 ### Data
 
 1. EPA Office of Air and Radiation, Climate Protection Partnerships Division. Light Bulb Revolution: EPA Predicts Widespread
