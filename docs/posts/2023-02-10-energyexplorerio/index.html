@@ -3251,18 +3251,21 @@ distill-header .nav a {
 <li><p>Converts historical hourly solar radiation dataset to hourly energy generation using modules from <a href="https://sam.nrel.gov/">NREL’s System Advisor Model (SAM)</a></p></li>
 <li><p>Identifies the the nearest CAISO wholesale LMP Node that the proposed plant could sell electricity to.</p></li>
 <li><p>Extracts one year historical hourly LMP prices from nearest LMP node (currently using static dataset due to difficulty connecting to CAISO API) and joins with hourly generation dataset.</p></li>
-<li><p>Simulates additional earnings generated through energy arbitrage if user includes a battery with the plant. To simulate arbitrage, the application assumes prices and energy generation will be exactly the same as the prior year. The battery is charged only:</p></li>
+<li><p>Simulates additional earnings generated through energy arbitrage if user includes a battery with the plant. To simulate arbitrage, the application assumes prices and energy generation will be exactly the same as the prior year. The battery is charged only</p></li>
 </ol>
+<blockquote>
 <ul>
 <li>During hours when the solar plant is generating electricity</li>
 <li>When the LMP price for the hour is lower than during evening hours when the plant stops generating</li>
 <li>And when there is still charge available in the battery.</li>
 </ul>
+</blockquote>
 <ol start="6" type="1">
 <li>Calculates LCOE per MWh is calculated using the following formula:</li>
 </ol>
 <p>lcoe = (((capital_cost_per_mw * (1-tax_credit/100)) * installed_capacity * crf) + (fixed_cost_per_mwh * installed_capacity)) / (installed_capacity * dc_capacity_factor * annual_operating_hours)</p>
 <p>where:</p>
+<blockquote>
 <ul>
 <li>capital_cost_per_mw: total cost of plant construction per MWdc</li>
 <li>tax_credit: 30% ITC</li>
@@ -3272,6 +3275,7 @@ distill-header .nav a {
 <li>dc_capacity_factor: capacity factor (the ratio of the electrical energy produced by a generating unit for the period of time considered to the electrical energy that could have been produced at continuous full power operation during the same period. source: <a href="https://www.eia.gov/tools/glossary/index.php?id=Capacity_factor">EIA</a>)</li>
 <li>annual_operating_hours: total number of hours per year the plant is operational</li>
 </ul>
+</blockquote>
 <ol start="7" type="1">
 <li><p>Calculates NPV by subtracting LCOE per MWh from average plant earnings per MWh and discounting over project lifetime</p></li>
 <li><p>Graphs output</p></li>
