@@ -22,13 +22,51 @@ htmltools::a(
 ```
 
 
-### Project overview
+## Project overview
 
-[energyexplorer.io](https://energy-explorer.herokuapp.com/site-finder/) is an independent project I developed as a master's student at the [Bren School of Environmental Science & Management](https://bren.ucsb.edu/). The main goal of the application to provide an intuitive, user-interactive dashboard for renewable energy developers to estimate the levelized cost of energy (LCOE) and net present value (NPV) of a proposed project at a desired location in California.
+[energyexplorer.io](https://energy-explorer.herokuapp.com/site-finder/) is a web application I independently developed to automate parts of a renewable energy project valuation assignment from [Dr. Ranjit Deshmukh's](https://bren.ucsb.edu/people/ranjit-deshmukh) [Energy & Electric Power Systems](https://bren.ucsb.edu/courses/esm-293-1s) course at the [Bren School of Environmental Science & Management](https://bren.ucsb.edu/). 
 
-The mathematical modeling and datasets used on the app's backend were chosen with the guidance of [Dr. Ranjit Deshmukh](https://bren.ucsb.edu/people/ranjit-deshmukh).
+The main goal of the application to provide an intuitive, user-interactive dashboard for renewable energy developers to estimate the levelized cost of energy (LCOE) and net present value (NPV) of a proposed project at a desired location in California.
 
-### Data
+To step through the energy and economic calculations performed by the app's backend, explore *data-pipeline.ipynb* in [this repo](https://github.com/Tbwheeler94/energy-explorer-data-pipeline).
+
+## Data analysis
+
+To calculate LCOE and NPV for a user defined location the application:
+
+1. Sends user defined project parameters to NREL's [National Solar Radiation Database (NSRDB)](https://nsrdb.nrel.gov/) which returns a one year historical hourly solar radiation for the project's latitude & longitude.
+
+2. Converts historical hourly solar radiation dataset to hourly energy generation using modules from [NREL’s System Advisor Model (SAM)](https://sam.nrel.gov/)
+
+3. Identifies the the nearest CAISO wholesale LMP Node that the proposed plant could sell electricity to.
+
+4. Extracts one year historical hourly LMP prices from nearest LMP node (currently using static dataset due to difficulty connecting to CAISO API) and joins with hourly generation dataset.
+
+5. Simulates additional earnings generated through energy arbitrage if user includes a battery with the plant. To simulate arbitrage, the application assumes prices and energy generation will be exactly the same as the prior year. The battery is charged only:
+
+- During hours when the solar plant is generating electricity
+- When the LMP price for the hour is lower than during evening hours when the plant stops generating
+- And when there is still charge available in the battery.
+
+6. Calculates LCOE per MWh is calculated using the following formula:
+
+lcoe = (((capital_cost_per_mw * (1-tax_credit/100)) * installed_capacity * crf) + (fixed_cost_per_mwh * installed_capacity)) / (installed_capacity * dc_capacity_factor * annual_operating_hours)
+
+where:
+
+- capital_cost_per_mw: total cost of plant construction per MWdc
+- tax_credit: 30% ITC
+- installed_capacity: total installed capacity of plant in MWdc
+- crf: capital recovery factor, a ratio used to determine the present value of a series of equal annual cash payments
+- fixed_cost_per_mwh: fixed O&M cost per MWdc to operate the plant over project lifetime
+- dc_capacity_factor: capacity factor (the ratio of the electrical energy produced by a generating unit for the period of time considered to the electrical energy that could have been produced at continuous full power operation during the same period. source: [EIA](https://www.eia.gov/tools/glossary/index.php?id=Capacity_factor))
+- annual_operating_hours: total number of hours per year the plant is operational
+
+7. Calculates NPV by subtracting LCOE per MWh from average plant earnings per MWh and discounting over project lifetime
+
+8. Graphs output
+
+## Data
 
 [National Solar Radiation Database (NSRDB)](https://nsrdb.nrel.gov/)
 - Database of hourly and half-hourly solar radiation (global horizontal, direct normal, and diffuse horizontal irradiance) across the United States and in some international locations. This dataset is accessed using NREL's [Python API](https://developer.nrel.gov/docs/solar/nsrdb/python-examples/).
@@ -45,11 +83,7 @@ The mathematical modeling and datasets used on the app's backend were chosen wit
 [NREL’s Cambium Viewer](https://www.nrel.gov/analysis/cambium.html)
 - Database and viewing tool developed by NREL to project future wholesale energy prices and marginal emission rates across the United States. Projections provided by Cambium were are not currently used in [energyexplorer.io](https://energy-explorer.herokuapp.com/site-finder/).
 
-### Data pipeline & analysis
-
-Navigate to the [data pipeline](https://energy-explorer.herokuapp.com/site-finder/data-pipeline) to see the process for remotely importing data and executing site calculations.
-
-### Application tech stack
+## Application tech stack
 
 Front-end:
 
