@@ -41,7 +41,7 @@ Our model development consisted of 6 steps:
 - Space cooling (electric air conditioner, electric chiller)
 - Water heating (natural gas tankless, electric tankless, heat pump)
 - Dish washing (dishwasher)
-- Lightining (incandescent bulbs, fluorescent bulbs, LED bulbs)
+- Lighting (incandescent bulbs, fluorescent bulbs, LED bulbs)
 - Personal computing (desktop computer, laptop computer, monitor)
 - Refrigeration (refrigerator)
 
