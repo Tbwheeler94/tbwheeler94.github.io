@@ -23,7 +23,7 @@ library(knitr)
 
 <h4>Bio</h4>
 
-Tom Wheeler is a web developer and energy data analyst with a master's of environmental science & management from the Bren School of Environmental Science & Management. Currently developing a [dashboard](https://tbwheeler94.github.io/posts/2023-02-10-energyexplorerio/) to calculate the future economic value of utility-scale solar with battery projects in California, Tom is excited about enabling renewable energy deployment and better grid management with DERs. In his most recent role as a Software Developer for the Industrial Sustainability Analysis Lab, Tom advanced the development of a data visualization dashboard (scheduled for public release in summer 2023) to help international climate policy-makers and data center energy modelers better understand trends in data center energy use by the top 50+ global technology companies.
+Tom Wheeler is a web developer and energy data analyst with a Master's of Environmental Science & Management from the Bren School of Environmental Science & Management. Currently working as an energy analyst for Portland General Electric, Tom is excited about enabling rapid renewable energy deployment and better grid management with DERs. Tom's previous work includes developing dashboards to [calculate the future economic value of utility-scale solar with battery projects in California](https://tbwheeler94.github.io/posts/2023-02-10-energyexplorerio/) and [tracking data center energy use by top tech companies](https://tbwheeler94.github.io/posts/2023-02-21-movingbitsorg/) to help international climate policy-makers and data center energy modelers better understand trends in data center energy use by the top 50+ global technology companies.
 
 <h4>Web Applications I've Worked On</h4>
 
@@ -50,14 +50,14 @@ energyexplorer.io
 <span data-toggle="tooltip" title="Dashboard not optimized for small screens. View on large screen (>900px) to enable button." class="hide-tooltip">
 <a class="disable-button" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
-<img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
+<img src="images/dcmlogo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
 </button>
 </a>
 </span>
-<span data-toggle="tooltip" title="This app is still under development and scheduled for launch in summer 2023. Please contact me for a live demonstration.">
+<span data-toggle="tooltip" title="This app is still under development and scheduled for launch in fall 2023. Please contact me for a live demonstration.">
 <a class="large-screen-button" style="display:none; pointer-events: none;" href="https://data-center-energy-use-dashboard.shinyapps.io/data-center-energy-use-dashboard/_w_89636e68/" target="_blank">
 <button type="button" class="btn btn-dark mb-2" style="display: inline-flex; align-items: center;">
-<img src="images/moving-bits-logo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
+<img src="images/dcmlogo.svg" style="float:left; padding-top: .2em; height: 1.5em;"></img>
 </button>
 </a>
 </span>
@@ -112,7 +112,7 @@ Other Projects & Experience
 
 <h4>Tools I've Worked With</h4>
 
-**Languages & web development frameworks:** R, R Shiny, Python, Django, JavaScript (leaflet.js) <br>
+**Languages & web development frameworks I work with:** R, R Shiny, Python, Django, Flask, JavaScript <br>
 **Modeling & analysis experience:** Geospatial Analysis, Time Series (Seasonal Decomposition), Value of Information Economic Analysis, Renewable Energy Project Valuation, Energy Demand Analysis <br>
 
 <h4>Education</h4>
